@@ -1,1 +1,9 @@
-<h1>Test header</h1>
+<header class="header">
+    <nav class="header-navigation">
+        <ul class="header-navigation__list">
+            <li v-for="menuItem in menuItems" class="header-navigation__list-item">
+                <a href="{{menuItem.menuLink}}" class="header-navigation__link">{{menuItem.menuName}}</a>
+            </li>
+        </ul>
+    </nav>
+</header>
