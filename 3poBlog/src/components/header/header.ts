@@ -10,6 +10,7 @@ export default defineComponent({
                 {menuName : 'HTML', menuLink: '#' },
                 {menuName : 'CSS', menuLink: '#' },
                 {menuName : 'JavaScript', menuLink: '#' },
+                {menuName : 'Accessibility', menuLink: '#' },
                 {menuName : '3PO Journal', menuLink: '#' },
             ]
         }
