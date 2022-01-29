@@ -1,0 +1,15 @@
+<header class="header">
+    <div class="header-logo logo">
+        <a class="logo-link" href="#">
+            <strong>3po</strong>
+            <span>Blog</span>
+        </a>
+    </div>
+    <nav class="header-navigation">
+        <ul class="header-navigation__list">
+            <li v-for="menuItem in menuItems" class="header-navigation__list-item">
+                <a :href="menuItem.menuText" class="header-navigation__link">{{menuItem.menuName}}</a>
+            </li>
+        </ul>
+    </nav>
+</header>
