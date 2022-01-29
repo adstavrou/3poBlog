@@ -1,14 +1,14 @@
 <header class="header">
     <div class="header-logo logo">
-        <a class="logo-link" href="#">
+        <router-link class="logo-link" to="/">
             <strong>3po</strong>
             <span>Blog</span>
-        </a>
+        </router-link>
     </div>
     <nav class="header-navigation">
         <ul class="header-navigation__list">
             <li v-for="menuItem in menuItems" class="header-navigation__list-item">
-                <a :href="menuItem.menuText" class="header-navigation__link">{{menuItem.menuName}}</a>
+                <router-link class="header-navigation__link" :to="menuItem.menuText">{{menuItem.menuName}}</router-link>
             </li>
         </ul>
     </nav>
