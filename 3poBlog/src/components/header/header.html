@@ -8,7 +8,7 @@
     <nav class="header-navigation">
         <ul class="header-navigation__list">
             <li v-for="menuItem in menuItems" class="header-navigation__list-item">
-                <router-link class="header-navigation__link" :to="menuItem.menuText">{{menuItem.menuName}}</router-link>
+                <router-link class="header-navigation__link" :to="{name: 'Category' , params: {categoryName : menuItem.menuText}}">{{menuItem.menuName}}</router-link>
             </li>
         </ul>
     </nav>
