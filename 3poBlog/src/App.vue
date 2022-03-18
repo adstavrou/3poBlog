@@ -16,6 +16,7 @@ export default defineComponent({
     Footer
   }
 })
+
 </script>
 
 <style>

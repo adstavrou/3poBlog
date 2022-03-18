@@ -5,29 +5,25 @@ import {collection, getDocs} from "firebase/firestore";
 const collectionNavigation = await getDocs(collection(db, 'navigation'));
 const mapNavigation: Array<object> = [];
 
-
-collectionNavigation.forEach((doc) => {
-    mapNavigation.push(doc.data());
-})
-
-
-console.log('test',mapNavigation);
-
 export default defineComponent({
     name: 'Header',
     props: {
 
     },
     data: () => {
-        return {
-            menuItems: mapNavigation,
-            dataMenuItems: {
 
-            }
+        return {
+            menuItems: mapNavigation
         }
     },
+
+    methods: {
+
+    },
+
     created: () => {
         console.log('test',db);
+
     },
 
     mounted: () => {
@@ -36,6 +32,9 @@ export default defineComponent({
 
     setup: () => {
         console.log('Header');
+        collectionNavigation.forEach((doc) => {
+            mapNavigation.push({docID: doc.id,  ...(doc.data())});
+        });
 
     }
 })
